@@ -25,7 +25,12 @@ forge install
 - Develop your app by running `forge tunnel` to proxy invocations locally:
 ```
 forge tunnel
+# run without docker
+# npm install -g @forge/tunnel
+# FORGE_DEV_TUNNEL=true forge tunnel
 ```
+
+
 
 ### Notes
 - Use the `forge deploy` command when you want to persist code changes.
