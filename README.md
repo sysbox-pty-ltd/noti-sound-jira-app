@@ -41,4 +41,4 @@ FORGE_DEV_TUNNEL=true forge tunnel
 
 ## Support
 
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
+See [Get help](mailto:support@sysbox.com.au) for how to get help and provide feedback.
