@@ -1,26 +1,26 @@
 import ForgeUI, {useEffect, useProductContext, useState} from "@forge/ui";
-import api, {route} from '@forge/api';
-import SetupPage from "./setup/SetupPage";
-
-const getInstance = async (projectId) => {
-  const response = await api
-    .asApp()
-    .requestJira(route `/rest/api/3/project/${projectId}`);
-  const results = await response.json();
-  return results
-}
-
+import SetupPage from "./pages/SetupPage";
+import {checkNRegisterCompany} from "./services/AppService";
+import LoadingPage from "./pages/LoadingPage";
 const App = () => {
-  // const [serverInfo] = useState(async () => await getInstance())
-  // console.log('serverInfo', serverInfo);
+  const [token, setToken]= useState(null);
+  const [notification, setNotification]= useState(null);
+  const [user, setUser]= useState(null);
   const context = useProductContext();
-  useEffect(() => {
-    console.log('context.accountId', context);
-    // getInstance(context.platformContext.)
+  useEffect(async () => {
+    const result = await checkNRegisterCompany(context);
+    const resultJson = await result.json();
+    setToken(resultJson.token);
+    setNotification(resultJson.notification);
+    setUser(resultJson.user);
   }, [context.accountId])
 
+  if (token === null || user === null || notification === null) {
+    return <LoadingPage />
+  }
+
   return (
-    <SetupPage />
+    <SetupPage token={token} notification={notification} user={user}/>
   );
 };
 

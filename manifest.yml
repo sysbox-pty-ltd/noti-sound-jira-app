@@ -1,11 +1,10 @@
 modules:
-  jira:projectPage:
+  jira:projectSettingsPage:
     - key: main-page
       function: main
       title: Noti Sound
       description: Notification Sound App for Jira Notifications
-#      resource: app-assets
-#      icon: assets/notification-icon.svg
+      icon: https://res.cloudinary.com/duudulwyh/image/upload/v1655820782/noti-sound/notification-icon_il1l6k.svg
   function:
     - key: main
       handler: index.run
@@ -13,12 +12,15 @@ modules:
 app:
   id: ari:cloud:ecosystem::app/39d84667-5cc5-4a51-8801-78c6e77aad02
 
-resources:
-  - key: app-assets
-    path: assets/
 
 permissions:
-  scopes:
-    - 'read:jira-user'
-    - 'read:jira-work'
-    - 'manage:jira-webhook'
+#  scopes:
+#    - 'read:jira-user'
+#    - 'read:jira-work'
+#    - 'manage:jira-webhook'
+  external:
+    fetch:
+      client:
+        - '*.herokuapp.com'
+      backend:
+        - '*.herokuapp.com'

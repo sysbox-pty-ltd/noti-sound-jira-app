@@ -1,8 +1,8 @@
-import ForgeUI, { render, ProjectPage } from '@forge/ui';
+import ForgeUI, { render, ProjectSettingsPage } from '@forge/ui';
 import App from './App';
 
 export const run = render(
-  <ProjectPage>
+  <ProjectSettingsPage>
     <App />
-  </ProjectPage>
+  </ProjectSettingsPage>
 );

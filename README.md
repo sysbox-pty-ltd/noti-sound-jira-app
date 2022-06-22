@@ -1,11 +1,10 @@
-# Forge Hello World
+# Noti Sound Jira App
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira issue panel. 
-
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
+The whole purpose of this project is play a sound when a new ticket is created.
 
 ## Requirements
 
+See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
 ## Quick start
@@ -25,9 +24,6 @@ forge install
 - Develop your app by running `forge tunnel` to proxy invocations locally:
 ```
 forge tunnel
-# run without docker
-# npm install -g @forge/tunnel
-# FORGE_DEV_TUNNEL=true forge tunnel
 ```
 
 
@@ -36,6 +32,12 @@ forge tunnel
 - Use the `forge deploy` command when you want to persist code changes.
 - Use the `forge install` command when you want to install the app on a new site.
 - Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
+- IMPORTANT: if you want to run without docker or on a Mac, please use this to tunnel
+```
+# run without docker
+npm install -g @forge/tunnel
+FORGE_DEV_TUNNEL=true forge tunnel
+```
 
 ## Support
 
