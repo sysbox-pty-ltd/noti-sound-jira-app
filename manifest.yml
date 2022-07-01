@@ -2,8 +2,8 @@ modules:
   jira:projectSettingsPage:
     - key: main-page
       function: main
-      title: Noti Sound
-      description: Notification Sound App for Jira Notifications
+      title: Notification Sound for Jira
+      description: Notification Sound App for Jira
       icon: https://res.cloudinary.com/duudulwyh/image/upload/v1655820782/noti-sound/notification-icon_il1l6k.svg
   function:
     - key: main
