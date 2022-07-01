@@ -1,17 +1,11 @@
-# Noti Sound Jira App
+# Notification Sound For Jira
 
 The whole purpose of this project is play a sound when a new ticket is created.
 
 
-## Steps to setup
+[![Notification Sound For Jira](./docs/images/setupVideoCover.png)](http://www.youtube.com/watch?v=suBaZODElUQ "Notification Sound For Jira")
 
-### Install this app from your Jira Marketplace:
-![Jira Market Place Dropdown](./docs/images/jira-marketplace-start.jpg "Jira Market Place Dropdown")
-
-### Search in the market place:
-![Jira Market Place Search](./docs/images/jira-marketplace-step2.jpg "Jira Market Place Search")
-
-
+[Click here to watch the setup video](http://www.youtube.com/watch?v=suBaZODElUQ "Notification Sound For Jira")
 
 ## Data Privacy Policy
 See [Privacy Policy](./docs/PrivacyPolicy.md) for more details.
