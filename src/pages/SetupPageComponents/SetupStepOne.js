@@ -1,6 +1,8 @@
 import ForgeUI, {Code, Fragment, Heading, Image, Link, Text, useEffect, useProductContext, useState, Table, Row, Cell} from "@forge/ui";
 
 const stepImgsFolder = 'https://res.cloudinary.com/duudulwyh/image/upload/v1655820738/noti-sound/setup-guide/automation-setup/';
+const setupVideoCover = 'https://res.cloudinary.com/duudulwyh/image/upload/v1656675279/noti-sound/setup-guide/automation-setup/setupVideoCover_zmev6t.png';
+const setupVideo = 'https://www.youtube.com/watch?v=suBaZODElUQ';
 
 const stepImgs = [
   'step1_rwskvf.png',
@@ -31,18 +33,32 @@ const SetupStepOne = ({notification}) => {
         <Table>
           <Row>
             {stepImgs.map((url, index) => {
+              if (index === 0) {
+                return (
+                  <Cell>
+                    <Image src={setupVideoCover} alt={'Setup Video'} />
+                  </Cell>
+                )
+              }
               return (
                 <Cell>
-                  <Image src={url} alt={`Step ${index + 1}`} />
+                  <Image src={url} alt={`Step ${index}`} />
                 </Cell>
               )
             })}
           </Row>
           <Row>
             {stepImgs.map((url, index) => {
+              if (index === 0) {
+                return (
+                  <Cell>
+                    <Text><Link href={setupVideo} openNewTab={true}>Watch Video</Link></Text>
+                  </Cell>
+                )
+              }
               return (
                 <Cell>
-                  <Text><Link href={url} openNewTab={true}>{`Step ${index + 1}`} Enlarge</Link></Text>
+                  <Text><Link href={url} openNewTab={true}>{`Step ${index}`} Enlarge</Link></Text>
                 </Cell>
               )
             })}
@@ -50,6 +66,7 @@ const SetupStepOne = ({notification}) => {
         </Table>
       </Fragment>
       <Text>
+        <Link href={setupVideo} openNewTab={true} appearance={'link'}>Watch Setup Video</Link>
         <Link href={automationUrl} openNewTab={true} appearance={'button'}>Go To Setup</Link>
       </Text>
     </Fragment>
