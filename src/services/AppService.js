@@ -1,4 +1,4 @@
-const endPoint = `https://noti-sound-api.herokuapp.com`
+const endPoint = `https://nspi.sysbox.app`
 import {fetch} from '@forge/api';
 
 export const checkNRegisterCompany = (data) => {

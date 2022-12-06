@@ -21,6 +21,6 @@ permissions:
   external:
     fetch:
       client:
-        - '*.herokuapp.com'
+        - '*.sysbox.app'
       backend:
-        - '*.herokuapp.com'
+        - '*.sysbox.app'
