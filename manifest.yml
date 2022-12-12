@@ -3,7 +3,7 @@ modules:
     - key: main-page
       function: main
       title: Notification Sound for Jira
-      description: Notification Sound App for Jira
+      description: Plays Notification Sound App for Jira
       icon: https://res.cloudinary.com/duudulwyh/image/upload/v1655820782/noti-sound/notification-icon_il1l6k.svg
   function:
     - key: main
